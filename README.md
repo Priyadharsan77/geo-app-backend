@@ -1,24 +1,24 @@
-# Geo App Backend In Node
+# Geo App Backend
 Backend for my geolocation app built in Swift by **Dhars**.
 
 ## How to use it
-1. Npm install the modules.
-2. Create a .env where you will have:
+1. `npm install` the modules.
+2. Create `config/config.env` with:
 ```
-  NODE_ENV = development
-  PORT = 5000
-  MONGO_URI = Your Cluster connection string from Atlas: MongoDB
+NODE_ENV=development
+PORT=3000
+MONGO_URI=mongodb://localhost:27017/geo-app
 ```
-3. Npm run dev
+3. `npm run dev`
 
-##  endpoints (GET & POST)
-http://localhost:5000/api/v1/user <br>
-http://localhost:5000/api/v1/pins
+## Endpoints (GET & POST)
+http://localhost:3000/api/v1/user
+http://localhost:3000/api/v1/pins
 
 ## JSON Format - POST req
 
 ### User (example)
-```
+```json
 {
     "userId": "Dhars",
     "location": {
@@ -28,7 +28,7 @@ http://localhost:5000/api/v1/pins
 ```
 
 ### Pins (example)
-```
+```json
 {
     "pinId": "1",
     "location": {
@@ -36,6 +36,3 @@ http://localhost:5000/api/v1/pins
     }
 }
 ```
-
-### NOTE 
-**You can expand the app by creating an authentication system which will allow you to register users and start reading their real-time location. If time allows it, I will eventually expand this project even more.**
